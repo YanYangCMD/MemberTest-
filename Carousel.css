@@ -1,0 +1,13 @@
+.ant-carousel .slick-slide {
+    text-align: center ;
+    font-size: 20px ;
+    height: 300px;
+    width: 20px;
+    line-height: 500px;
+    background: #0b00a1 ;
+    overflow: show;
+  }
+  
+  .ant-carousel .slick-slide h3 {
+    color: rgb(255, 255, 255);
+  }
