@@ -1,0 +1,45 @@
+import React, { useState } from "react";
+import SideBar from "../components/SideBar"
+import TopBar from "../components/TopBar";
+import { Layout,Affix } from 'antd';
+
+const { Header, Content, Sider } = Layout;
+
+function Calendar () {
+    const [top, setTop] = useState(10);
+    return (
+        <div>
+            <Layout>
+                <TopBar/>
+            
+            <Layout>
+                <Sider 
+                className="site-layout-background" 
+                theme="light" 
+                style={{ minHeight: 600,}} 
+                >
+                    <Affix offsetTop={top} >
+                        <SideBar />
+                        </Affix>
+                </Sider>
+            
+            <Layout style={{ padding: '0 24px 24px' }} >
+                <Content 
+                className="site-layout-background"
+                style={{
+                padding: '12px 0px',
+                margin: 0,
+                minHeight: 280,
+                }}
+                >
+                    This is Calendar 
+                </Content>
+            </Layout>
+            </Layout>
+            </Layout>
+        </div>
+    );
+
+}
+
+export default Calendar;
